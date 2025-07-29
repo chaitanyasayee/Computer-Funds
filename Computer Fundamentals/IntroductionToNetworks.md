@@ -312,7 +312,7 @@ Think of topologies like a **city's road system**:
 
 ---
 
-### ⭐ **1. Star Topology**
+### **1. Star Topology**
 
 **Structure:** All devices connect to a **central hub/switch**.
 
@@ -326,7 +326,7 @@ Think of topologies like a **city's road system**:
 
 ---
 
-### 🔁 **2. Ring Topology**
+### **2. Ring Topology**
 
 **Structure:** Devices connected in a **circular loop**.
 
@@ -340,7 +340,7 @@ Think of topologies like a **city's road system**:
 
 ---
 
-### 🕸️ **3. Mesh Topology**
+### **3. Mesh Topology**
 
 **Structure:** Each device connects **directly** to every other device.
 
@@ -354,7 +354,7 @@ Think of topologies like a **city's road system**:
 
 ---
 
-### 🚌 **4. Bus Topology**
+### **4. Bus Topology**
 
 **Structure:** All devices share a **single backbone cable**.
 
@@ -368,7 +368,7 @@ Think of topologies like a **city's road system**:
 
 ---
 
-### 📊 **Comparison of Topologies**
+### **Comparison of Topologies**
 
 | **Feature**     | **Star**            | **Ring**                | **Mesh**               | **Bus**                |
 | --------------- | ------------------- | ----------------------- | ---------------------- | ---------------------- |
@@ -380,13 +380,13 @@ Think of topologies like a **city's road system**:
 
 ---
 
-## 🧠 **Logical Topologies**
+## **Logical Topologies**
 
 Logical topologies focus on **how data is transmitted** within a network, regardless of the physical connections.
 
 ---
 
-### 🧵 **1. Logical Bus Topology**
+### **1. Logical Bus Topology**
 
 - All devices share a **common channel** for data transfer.
 - Devices listen to all data but only process intended packets.
@@ -395,7 +395,7 @@ Logical topologies focus on **how data is transmitted** within a network, regard
 
 ---
 
-### 🔄 **2. Logical Ring Topology**
+### **2. Logical Ring Topology**
 
 - Data moves in a **predefined circular path**.
 - Each device passes the data along the ring.
@@ -404,7 +404,7 @@ Logical topologies focus on **how data is transmitted** within a network, regard
 
 ---
 
-## 🎟️ **Token Passing**
+## **Token Passing**
 
 **Definition:**
 
@@ -420,7 +420,7 @@ A method where a special data packet, called a **token**, circulates in the netw
 
 ---
 
-## 🔁 **FDDI (Fiber Distributed Data Interface)**
+## **FDDI (Fiber Distributed Data Interface)**
 
 **Definition:**
 
@@ -436,7 +436,7 @@ FDDI is a high-speed standard that uses **dual-ring topology** for redundancy an
 
 ---
 
-## 🧱 **Virtual LANs (VLANs)**
+## **Virtual LANs (VLANs)**
 
 **Definition:**
 
@@ -454,7 +454,7 @@ In a corporate office, VLANs separate traffic between departments like HR, Finan
 
 ---
 
-## ⚖️ **Logical vs Physical Topologies**
+## **Logical vs Physical Topologies**
 
 | **Aspect**         | **Logical Topology**                       | **Physical Topology**                           |
 | ------------------ | ------------------------------------------ | ----------------------------------------------- |
