@@ -422,10 +422,201 @@ Best Practices When Using Attributes and Methods
 
 ## Constructor
 
-Key Features
+A **constructor** is a **special method** that gets called **automatically** when an object of a class is **created**. It’s mainly used to **initialize** the object's state (i.e., its variables/attributes).
 
-Purpose of Constructor
+## Key Characteristics
 
-Types of Constructor
+| Feature          | Description                                                 |
+| ---------------- | ----------------------------------------------------------- |
+| Name             | Same as the class (in C++/Java); `__init__` in Python       |
+| Return Type      | No return type (not even `void`)                            |
+| Called When?     | Automatically, at object creation                           |
+| Default Behavior | If not written, a default constructor is used automatically |
 
-Can a constructor call another constructor
+## Purpose of a Constructor
+
+1. **Object Initialisation**: Sets initial values for the object’s attributes.
+2. **Code Reusability**: Same constructor logic is used every time a new object is created.
+3. **Default Values**: Ensures the object starts with a valid default state.
+
+---
+
+## Types of Constructors
+
+### 1. Non-Parameterized Constructor
+
+A constructor that takes **no arguments**.
+
+**Java:**
+
+```java
+class BankAccount {
+    int balance;
+
+    BankAccount() {
+        balance = 0;
+        System.out.println("Account created with default balance");
+    }
+}
+
+```
+
+**Python:**
+
+```python
+class BankAccount:
+    def __init__(self):
+        self.balance = 0
+        print("Account created with default balance")
+
+```
+
+---
+
+### 2. Parameterized Constructor
+
+A constructor that takes **arguments** to assign values.
+
+**Java:**
+
+```java
+class BankAccount {
+    int balance;
+
+    BankAccount(int initialBalance) {
+        this.balance = initialBalance;
+    }
+}
+
+```
+
+**Python:**
+
+```python
+class BankAccount:
+    def __init__(self, initial_balance):
+        self.balance = initial_balance
+
+```
+
+---
+
+### 3. Copy Constructor
+
+Used to **copy values** from another object of the same class.
+
+**C++:**
+
+```cpp
+class BankAccount {
+    int balance;
+public:
+    BankAccount(int b) { balance = b; }
+    BankAccount(const BankAccount &acc) { balance = acc.balance; } // Copy constructor
+};
+
+```
+
+**Java (manual copy constructor):**
+
+```java
+class BankAccount {
+    int balance;
+
+    BankAccount(BankAccount another) {
+        this.balance = another.balance;
+    }
+}
+
+```
+
+**Python:**
+
+```python
+class BankAccount:
+    def __init__(self, other=None):
+        if other:
+            self.balance = other.balance
+        else:
+            self.balance = 0
+
+```
+
+---
+
+## Constructor Chaining (Java)
+
+Chaining means calling one constructor from another to avoid duplicate code.
+
+```java
+class BankAccount {
+    int balance;
+
+    BankAccount() {
+        this(100); // calling another constructor
+    }
+
+    BankAccount(int initialBalance) {
+        this.balance = initialBalance;
+    }
+}
+
+```
+
+The `this()` call must be **first line** in the constructor.
+
+---
+
+## Constructor Overloading
+
+When a class has **multiple constructors** with different **parameter lists**.
+
+```java
+class BankAccount {
+    int balance;
+
+    BankAccount() {
+        this.balance = 0;
+    }
+
+    BankAccount(int initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    BankAccount(int deposit, int withdrawal) {
+        this.balance = deposit - withdrawal;
+    }
+}
+
+```
+
+🟢 **Advantages:**
+
+- Flexibility in object creation
+- Cleaner and reusable code
+
+---
+
+## Real-World Example: Bank Account
+
+### Use Case:
+
+You're building a banking system that lets users:
+
+- Create an account with zero or custom balance
+- Duplicate an account (copy constructor)
+- Use different constructors for different account types (savings, salary, etc.)
+
+### Benefits of Constructors:
+
+- Ensures every account starts with valid balance
+- Easy to initialize different types of accounts
+- Reduces code duplication with chaining and overloading
+
+| Concept                 | Description                                         |
+| ----------------------- | --------------------------------------------------- |
+| Constructor             | Initializes objects during creation                 |
+| Types                   | Non-parameterized, Parameterized, Copy              |
+| Constructor Overloading | Same class, multiple constructors                   |
+| Constructor Chaining    | One constructor calling another                     |
+| Use-case                | Clean, reusable, and flexible object initialization |
